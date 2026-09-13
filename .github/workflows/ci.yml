@@ -1,7 +1,6 @@
 name: CI
 
 on:
-  workflow_dispatch:
   push:
     branches: [main]
   pull_request:
@@ -10,7 +9,7 @@ on:
 jobs:
   verify-stub:
     name: Headless runtime stub
-    runs-on: selfrunners
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
